@@ -1,4 +1,4 @@
-<div>
+<div class="mypost">
     <h1 class="text-center offset-2">My All Post</h1>
     <div class="row offset-1 mt-5">
         <div class="row offset-4">
@@ -37,7 +37,7 @@
                 </h1>
             @endif
     </div>
-    {{$posts->links()}}
+    <div class="d-flex justify-content-center offset-2 mt-3">{{$posts->links()}}</div>
 </div>
 
 
@@ -83,5 +83,9 @@
         border-radius: 2px;
         border: none;
         width: 500px;
+    }
+    .mypost {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 </style>

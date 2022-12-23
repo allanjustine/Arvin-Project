@@ -1,6 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
     <span alt="logo" class="img-fluid rounded-circle img-responsive" style="width: 30px; margin-left: 50px"></span>
+    @role('writer')
     <a href="/" style="text-decoration: none; color: black; font-size: 30px;">Mini Capstone Project</a>
+    @endrole
+    @role('admin')
+    <a href="/admin" style="text-decoration: none; color: black; font-size: 30px;">Mini Capstone Project</a>
+    @endrole
     <ul class="navbar-nav">
         @role('writer')
         <li class="nav-item">

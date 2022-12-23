@@ -36,7 +36,7 @@ class AuthController extends Controller
         if(!$login){
             return back()->with('error', 'Password is incorrect');
         }
-        
+
         if (auth()->user()->is_admin) {
             return redirect()->intended('admin');
         }

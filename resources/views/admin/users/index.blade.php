@@ -6,9 +6,9 @@
 
 @section('content')
     <div class="container">
-                @if (session('message'))
-                    <div class="alert alert-success mt-5">{{ session('message') }}</div>
-                @endif
+        @if (session('message'))
+            <div class="alert alert-success mt-5">{{ session('message') }}</div>
+        @endif
         <livewire:admin.users.index/>
     </div>
 

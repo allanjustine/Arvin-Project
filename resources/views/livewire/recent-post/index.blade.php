@@ -1,4 +1,4 @@
-<div>
+<div class="recentpost">
     <h1 class="text-center offset-2">Recent Posts</h1>
     <div class="row offset-1 mt-5">
         <div class="row offset-4">
@@ -39,7 +39,7 @@
                 </h1>
             @endif
     </div>
-    {{$recentPosts->links()}}
+    <div class="d-flex justify-content-center offset-2 mt-3">{{$recentPosts->links()}}</div>
 </div>
 
 
@@ -85,5 +85,9 @@
         border-radius: 2px;
         border: none;
         width: 500px;
+    }
+    .recentpost {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 </style>
