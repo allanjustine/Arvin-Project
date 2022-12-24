@@ -24,6 +24,7 @@ Route::get('/register', [AuthController::class, 'registerForm']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::get('/verification/{user}/{token}', [AuthController::class,'verification']);
 Route::get('logout', [AuthController::class, 'logout']);
+Route::get('/recentPost', [PostController::class, 'index2']);
 
 Route::group(['middleware' => ['auth', 'role:writer']], function () {
     Route::get('/dashboard', function() {
@@ -40,7 +41,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/editRecentPost/{recentPost}', [PostController::class, 'edit2']);
     Route::get('/deleteRecentPost/{recentPost}', [PostController::class, 'destroy2']);
 
-    Route::get('/recentPost', [PostController::class, 'index2']);
+    // Route::get('/recentPost', [PostController::class, 'index2']);
 
 });
 

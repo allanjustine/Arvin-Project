@@ -1,5 +1,7 @@
 @extends('base')
 
+@include('navbar')
+
 @section('content')
 
 @section('title', 'Register')

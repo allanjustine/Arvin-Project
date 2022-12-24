@@ -31,9 +31,14 @@
       </ul>
       <div class="dropdown mx-auto">
                 <a class="btn dropdown-toggle" id="buttt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{Auth::user()->name}}
+                    @if (Auth::check())
+                    {{Auth::user()->name}}
+                    @else
+                    Login or Register here
+                    @endif
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="select3" style="background-color: white;">
+                    @if (Auth::check())
                     <li class="nav-item  {{ 'create' == request()->path() ? 'active2' : '' }}"  id="hover-drop">
                         <a style="margin-left: 20px" class="nav-link" href="/create">Create Post</a>
                     </li>
@@ -43,8 +48,16 @@
                     <li class="nav-item"  id="hover-drop">
                         <a href="{{ '/logout' }}" class="nav-link" style="text-decoration: none; margin-right: 10px;"><i class="fa fa-sign-out"></i>&nbsp;Logout</a>
                     </li>
+                    @else
+                    <li class="nav-item" id="hover-drop">
+                        <a class="nav-link" href="{{url('/register')}}">Register</a>
+                    </li>
+                    <li class="nav-item" id="hover-drop">
+                        <a class="nav-link" href="{{url('/')}}">Login</a>
+                    </li>
+                    @endif
                 </div>
-            </div>
+        </div>
 </nav>
 
 <style>
