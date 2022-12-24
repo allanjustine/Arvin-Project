@@ -22,7 +22,7 @@
                 @enderror
         </div>
         <div class="card-body">
-            <textarea name="remarks" id="" cols="58" rows="5" wire:model.defer="remarks"></textarea>
+            <textarea class="form-control" name="remarks" id="" cols="58" rows="5" wire:model.defer="remarks"></textarea>
         </div>
 
             @error('remarks')
